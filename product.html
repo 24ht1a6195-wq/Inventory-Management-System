@@ -2,50 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Products</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Products Inventory</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background-color: #f4f6f9; }
-        .navbar { background-color: #2c3e50; padding: 15px; display: flex; gap: 20px; }
-        .navbar a { color: white; text-decoration: none; font-weight: bold; padding: 8px 16px; border-radius: 4px; }
-        .container { padding: 30px; max-width: 500px; margin: auto; }
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
-        .form-group input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        .btn { padding: 10px 20px; background-color: #008744; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+        .products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 20px; }
+        .product-card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 2px 2px 10px #eee; }
+        .product-card img { width: 100px; height: 100px; object-fit: cover; border-radius: 5px; }
+        button { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
     </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <a href="../index.html">Dashboard</a>
-        <a href="product.html">Products</a>
-        <a href="sales.html">Sales</a>
-        <a href="reports.html">Reports</a>
-    </div>
+<div class="header">
+    <h2>Available Inventory</h2>
+    <a href="add-product.html"><button>+ Add Product</button></a>
+</div>
 
-    <div class="container">
-        <h2>Add New Product</h2>
-        <!-- Form ID must be productForm -->
-        <form id="productForm">
-            <div class="form-group">
-                <label>Product Name:</label>
-                <input type="text" id="productName" placeholder="e.g., Laptop" required>
-            </div>
-            <div class="form-group">
-                <label>Price ($):</label>
-                <input type="number" id="productPrice" placeholder="e.g., 500" step="0.01" required>
-            </div>
-            <div class="form-group">
-                <label>Quantity:</label>
-                <input type="number" id="productQty" placeholder="e.g., 10" required>
-            </div>
-            <button type="submit" class="btn">Add Product</button>
-        </form>
-    </div>
+<div class="products-grid">
+    <div class="product-card"><img src="images/apple.jpg" alt="Apple"><h3>Apple</h3></div>
+    <div class="product-card"><img src="images/banana.jpg" alt="Banana"><h3>Banana</h3></div>
+    <div class="product-card"><img src="images/mangoes.jpg" alt="Mangoes"><h3>Mangoes</h3></div>
+    <div class="product-card"><img src="images/oranges.jpg" alt="Oranges"><h3>Oranges</h3></div>
+    <div class="product-card"><img src="images/grapes.jpg" alt="Grapes"><h3>Grapes</h3></div>
+    <div class="product-card"><img src="images/pineapple.jpg" alt="Pineapple"><h3>Pineapple</h3></div>
+    <div class="product-card"><img src="images/watermelon.jpg" alt="Watermelon"><h3>Watermelon</h3></div>
+    <div class="product-card"><img src="images/papaya.jpg" alt="Papaya"><h3>Papaya</h3></div>
+    <div class="product-card"><img src="images/guava.jpg" alt="Guava"><h3>Guava</h3></div>
+    <div class="product-card"><img src="images/pomegranate.jpg" alt="Pomegranate"><h3>Pomegranate</h3></div>
+    <div class="product-card"><img src="images/strawberry.jpg" alt="Strawberry"><h3>Strawberry</h3></div>
+    <div class="product-card"><img src="images/kiwi.jpg" alt="Kiwi"><h3>Kiwi</h3></div>
+    <div class="product-card"><img src="images/muskmelon.jpg" alt="Muskmelon"><h3>Muskmelon</h3></div>
+    <div class="product-card"><img src="images/sapota.jpg" alt="Sapota"><h3>Sapota</h3></div>
+    <div class="product-card"><img src="images/dragonfruit.jpg" alt="Dragon Fruit"><h3>Dragon Fruit</h3></div>
+    <div class="product-card"><img src="images/avocado.jpg" alt="Avocado"><h3>Avocado</h3></div>
+</div>
 
-    <!-- Script connection to handle localStorage savings -->
-    <script src="../js/script.js"></script>
 </body>
 </html>
