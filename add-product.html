@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Product</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 40px; background-color: #f4f4f4; }
+        form { max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input { width: 100%; padding: 10px; margin: 10px 0; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+        .back-btn { background-color: #888; text-decoration: none; display: block; text-align: center; color: white; padding: 10px; border-radius: 5px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <form id="productForm">
+        <h2>Add New Product</h2>
+        <label>Product Name:</label>
+        <input type="text" id="pName" placeholder="e.g. Apple" required>
+        
+        <label>Image File Name (with extension):</label>
+        <input type="text" id="pImage" placeholder="e.g. apple.jpg" required>
+        
+        <button type="button" onclick="saveProduct()">Save Product</button>
+        <a href="product.html" class="back-btn">Back to Inventory</a>
+    </form>
+
+    <script>
+        function saveProduct() {
+            const name = document.getElementById('pName').value;
+            const image = document.getElementById('pImage').value;
+
+            if (name && image) {
+                // Get existing products from localStorage or create new array
+                let products = JSON.parse(localStorage.getItem('myProducts')) || [];
+                
+                // Add new product
+                products.push({ name: name, image: image });
+                
+                // Save back to localStorage
+                localStorage.setItem('myProducts', JSON.stringify(products));
+                
+                alert("Product " + name + " added successfully!");
+                window.location.href = "product.html";
+            } else {
+                alert("Please fill in all fields!");
+            }
+        }
+    </script>
+</body>
+</html>

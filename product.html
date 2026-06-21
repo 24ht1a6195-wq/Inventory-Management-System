@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products Inventory</title>
+    <style>
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+        .products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 20px; }
+        .product-card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 2px 2px 10px #eee; }
+        .product-card img { width: 100px; height: 100px; object-fit: cover; border-radius: 5px; }
+        button { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>Available Inventory</h2>
+    <a href="add-product.html"><button>+ Add Product</button></a>
+</div>
+
+<div class="products-grid">
+    <div class="product-card"><img src="images/apple.jpg" alt="Apple"><h3>Apple</h3></div>
+    <div class="product-card"><img src="images/banana.jpg" alt="Banana"><h3>Banana</h3></div>
+    <div class="product-card"><img src="images/mangoes.jpg" alt="Mangoes"><h3>Mangoes</h3></div>
+    <div class="product-card"><img src="images/oranges.jpg" alt="Oranges"><h3>Oranges</h3></div>
+    <div class="product-card"><img src="images/grapes.jpg" alt="Grapes"><h3>Grapes</h3></div>
+    <div class="product-card"><img src="images/pineapple.jpg" alt="Pineapple"><h3>Pineapple</h3></div>
+    <div class="product-card"><img src="images/watermelon.jpg" alt="Watermelon"><h3>Watermelon</h3></div>
+    <div class="product-card"><img src="images/papaya.jpg" alt="Papaya"><h3>Papaya</h3></div>
+    <div class="product-card"><img src="images/guava.jpg" alt="Guava"><h3>Guava</h3></div>
+    <div class="product-card"><img src="images/pomegranate.jpg" alt="Pomegranate"><h3>Pomegranate</h3></div>
+    <div class="product-card"><img src="images/strawberry.jpg" alt="Strawberry"><h3>Strawberry</h3></div>
+    <div class="product-card"><img src="images/kiwi.jpg" alt="Kiwi"><h3>Kiwi</h3></div>
+    <div class="product-card"><img src="images/muskmelon.jpg" alt="Muskmelon"><h3>Muskmelon</h3></div>
+    <div class="product-card"><img src="images/sapota.jpg" alt="Sapota"><h3>Sapota</h3></div>
+    <div class="product-card"><img src="images/dragonfruit.jpg" alt="Dragon Fruit"><h3>Dragon Fruit</h3></div>
+    <div class="product-card"><img src="images/avocado.jpg" alt="Avocado"><h3>Avocado</h3></div>
+</div>
+
+</body>
+</html>
